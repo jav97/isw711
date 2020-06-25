@@ -47,7 +47,7 @@ const taskPost = (req, res) => {
 const taskGet = (req, res) => {
   // if an specific task is required
   if (req.query && req.query.id) {
-    Task.findById(req.query.id, function (err, task) {
+    Task.findBy(req.query.id, function (err, task) {
       if (err) {
         res.status(404);
         console.log('error while queryting the student', err)

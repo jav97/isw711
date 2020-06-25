@@ -28,6 +28,7 @@ app.get("/api/tasks", taskGet);
 app.post("/api/tasks", taskPost);
 app.patch("/api/tasks", taskPatch);
 app.put("/api/tasks", taskPatch);
+app.delete("/api/tasks", taskDelete);
 
 
 app.listen(3000, () => console.log(`Example app listening on port 3000!`))
