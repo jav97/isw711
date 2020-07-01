@@ -2,7 +2,17 @@ const express = require('express');
 const app = express();
 // database connection
 const mongoose = require("mongoose");
-const db = mongoose.connect("mongodb://127.0.0.1:27017/todo-api");
+//const db = mongoose.connect("mongodb://127.0.0.1:27017/todo-api");
+let options = {useNewUrlParser: true,useUnifiedTopology: true};
+let uri = 'mongodb://127.0.0.1:27017/todo-api';
+
+mongoose.connect(uri, options).then(
+() => {
+    console.log('Connected to the database!')
+},
+    err => { console.log('Error! Could not connect') }
+);
+
 
 const {
   taskPatch,

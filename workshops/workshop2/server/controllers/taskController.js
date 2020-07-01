@@ -14,7 +14,7 @@ const taskPost = (req, res) => {
   task.email = req.body.email;
   task.address = req.body.address;
 
-  if (task.title && task.detail) {
+  if (task.firstname && task.lastname &&  task.email && task.address ) {
     task.save(function (err) {
       if (err) {
         res.status(422);
