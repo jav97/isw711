@@ -1,7 +1,5 @@
 # GraphQL-MongoDB-Example
 
-All the important code is in `src/start.js`.
-
 Install, build and run:
 
 ```
@@ -11,6 +9,7 @@ yarn start
 ```
 
 For Local Development 
+```npm install``` 
 
 You need to start Mongodb for Local development 
 
